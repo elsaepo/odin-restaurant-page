@@ -1,3 +1,5 @@
+import crumpet01 from "./crumpet01.png"
+
 const content = document.querySelector("#content");
 
 const createHeader = () => {
@@ -24,7 +26,8 @@ const createHeader = () => {
 const createListItem = function(href, text){
     const listItem = document.createElement("li");
     const listLink = document.createElement("a");
-    listLink.setAttribute("href", [href]);
+    //listLink.setAttribute("href", [href]);
+    listLink.classList.add("nav-link");
     const listText = document.createElement("p");
     listText.textContent = text;
     listLink.appendChild(listText);
@@ -36,10 +39,11 @@ const createHome = (parent) => {
     const mainHeader = document.createElement("h2");
     mainHeader.textContent = "The krumpiest krumpets in krumpville!";
     const mainImg = document.createElement("img");
-    mainImg.setAttribute("src", "../src/crumpet01.png");
+    mainImg.src = crumpet01;
     mainImg.setAttribute("alt", "a delicious krumpet");
     const mainP = document.createElement("p");
     mainP.textContent = "Hi, I'm Kindon! And I make krumpets. They're so krumpy! My favourite part of krumpets is when they krump :)";
+    
     parent.appendChild(mainHeader);
     parent.appendChild(mainImg);
     parent.appendChild(mainP);
