@@ -56,3 +56,7 @@ body {
     margin: 0 calc(var(--padding-sides) - 4%);
     padding: 2% 4%;
 }
+
+.main-section img {
+    width: 100%;
+}
