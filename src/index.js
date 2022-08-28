@@ -1,7 +1,13 @@
-import { createHeader, createMain } from "./home.js";
+import { content, createHeader, createHome, createMain } from "./home.js";
+// import { createMenu } from "./menu.js";
+// import { createContact } from "./contact.js";
 import "./style.css";
 
-console.log("we have updated!");
-
 content.appendChild(createHeader());
-content.appendChild(createMain());
+const bodyContainer = createMain();
+content.appendChild(bodyContainer);
+
+createHome(bodyContainer);
+
+// need a placeholder bodyContainer
+// createHome(), createMenu(), createContact();

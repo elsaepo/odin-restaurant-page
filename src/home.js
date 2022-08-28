@@ -32,9 +32,7 @@ const createListItem = function(href, text){
     return listItem;
 };
 
-const createMain = () => {
-    const main = document.createElement("main");
-    main.classList.add("main-section");
+const createHome = (parent) => {
     const mainHeader = document.createElement("h2");
     mainHeader.textContent = "The krumpiest krumpets in krumpville!";
     const mainImg = document.createElement("img");
@@ -42,10 +40,16 @@ const createMain = () => {
     mainImg.setAttribute("alt", "a delicious krumpet");
     const mainP = document.createElement("p");
     mainP.textContent = "Hi, I'm Kindon! And I make krumpets. They're so krumpy! My favourite part of krumpets is when they krump :)";
-    main.appendChild(mainHeader);
-    main.appendChild(mainImg);
-    main.appendChild(mainP);
-    return main;
+    parent.appendChild(mainHeader);
+    parent.appendChild(mainImg);
+    parent.appendChild(mainP);
+    return parent;
 };
 
-export { content, createHeader, createMain };
+const createMain = () => {
+    const main = document.createElement("main");
+    main.classList.add("main-section");
+    return main;
+}
+
+export { content, createHeader, createMain, createHome };
