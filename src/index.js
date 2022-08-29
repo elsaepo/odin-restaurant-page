@@ -29,6 +29,3 @@ linkButtons.forEach(button => button.addEventListener("mousedown", function(even
                 return;
         }
 }))
-
-// need a placeholder bodyContainer
-// createHome(), createMenu(), createContact();
